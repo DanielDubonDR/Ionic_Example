@@ -1,0 +1,39 @@
+ion-content {
+  --background: linear-gradient(180deg, #f4f5f8, #e3e9ff);
+}
+
+.contador-card {
+  border-radius: 20px;
+  text-align: center;
+}
+
+.etiqueta {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.numero {
+  margin: 0;
+  font-size: 6rem;
+  font-weight: 800;
+  transition: color 0.3s;
+}
+
+.positivo { color: var(--ion-color-success); }
+.negativo { color: var(--ion-color-danger); }
+
+.mensaje {
+  margin: 0 0 16px;
+  opacity: 0.7;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}

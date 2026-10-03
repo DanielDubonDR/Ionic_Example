@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Contador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <app-clock-card></app-clock-card>
+
+  <ion-card class="contador-card">
+    <ion-card-content>
+      <p class="etiqueta">Valor actual</p>
+
+      <h1
+        class="numero"
+        [class.positivo]="counter.valor() > 0"
+        [class.negativo]="counter.valor() < 0"
+      >
+        {{ counter.valor() }}
+      </h1>
+
+      <p class="mensaje">{{ counter.mensaje() }}</p>
+
+      <ion-segment [value]="counter.paso()" (ionChange)="cambiarPaso($event)">
+        <ion-segment-button [value]="1"><ion-label>+1</ion-label></ion-segment-button>
+        <ion-segment-button [value]="5"><ion-label>+5</ion-label></ion-segment-button>
+        <ion-segment-button [value]="10"><ion-label>+10</ion-label></ion-segment-button>
+      </ion-segment>
+
+      <div class="botones">
+        <ion-button shape="round" size="large" color="danger" (click)="counter.restar()">
+          <ion-icon slot="icon-only" name="remove"></ion-icon>
+        </ion-button>
+
+        <ion-button shape="round" fill="outline" color="medium" (click)="counter.reiniciar()">
+          <ion-icon slot="icon-only" name="refresh"></ion-icon>
+        </ion-button>
+
+        <ion-button shape="round" size="large" color="success" (click)="counter.sumar()">
+          <ion-icon slot="icon-only" name="add"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

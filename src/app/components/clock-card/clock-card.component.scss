@@ -1,0 +1,19 @@
+.reloj {
+  --background: linear-gradient(135deg, #3880ff, #7044ff);
+  --color: #fff;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.fecha {
+  margin: 0;
+  opacity: 0.9;
+  text-transform: capitalize;
+}
+
+.hora {
+  margin: 4px 0 0;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
